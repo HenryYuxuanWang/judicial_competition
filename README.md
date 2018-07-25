@@ -18,9 +18,9 @@ scikit-learn==0.19.1<br>
 ## **比赛详情**
 ![比赛介绍](/pics/competition.png)<br>
 为了促进法律智能相关技术的发展，在最高人民法院信息中心、共青团中央青年发展部的指导下，中国司法大数据研究院、中国中文信息学会、中电科系统团委联合清华大学、北京大学、中国科学院软件研究所共同举办“2018中国‘法研杯’法律智能挑战赛（CAIL2018）”。<br>
-官方网站：[http://cail.cipsc.org.cn/](http://cail.cipsc.org.cn/ "悬停显示")<br>
-域名：[http://180.76.238.177/](http://180.76.238.177/ "悬停显示")<br>
-GitHub：[https://github.com/thunlp/CAIL/"悬停显示"]
+官方网站：[http://cail.cipsc.org.cn](http://cail.cipsc.org.cn "悬停显示")<br>
+域名：[http://180.76.238.177](http://180.76.238.177 "悬停显示")<br>
+GitHub：[https://github.com/thunlp/CAIL ](https://github.com/thunlp/CAIL "悬停显示")
 
 ## **任务介绍**
 --------------------
