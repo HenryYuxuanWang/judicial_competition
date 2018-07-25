@@ -41,16 +41,27 @@ GitHub：[https://github.com/thunlp/CAIL ](https://github.com/thunlp/CAIL "悬�
    'imprisonment': 12,
    'life_imprisonment': False}}}
 ```
-`fact`:
+__*字段及意义:*__
+* **fact**: 事实描述
+* **meta**: 标注信息，标注信息中包括:
+	* **criminals**: 被告(数据中均只含一个被告)
+	* **punish\_of\_money**: 罚款(单位：元)
+	* **accusation**: 罪名
+	* **relevant\_articles**: 相关法条
+	* **term\_of\_imprisonment**: 刑期
+		刑期格式(单位：月)
+		* **death\_penalty**: 是否死刑
+		* **life\_imprisonment**: 是否无期
+		* **imprisonment**: 有期徒刑刑期
 
 
-共涉及202条罪名[罪名](/good/accu.txt)，183条[法条](/good/law.txt)，刑期长短包括0-25年、无期、死刑。<br>
+共涉及202条[罪名](/good/accu.txt)，183条[法条](/good/law.txt)，刑期长短包括0-25年、无期、死刑。<br>
 
 ## **模块简介**
 这个模块主要包含三大块：
-1. 数据预处理 data preprocessing
-2. 模型 model
-3. 预测 precditor
+1. 数据预处理 [data_utils](/data_utils)
+2. 模型 [model](/model)
+3. 预测 [precditor](/python_sample/predictor)
 
 由于时间和任务的关系，这一次我只利用了第一阶段的数据实现了`罪名预测`和`刑期预测`两个任务，两个任务使用相同的模型结构。
 
