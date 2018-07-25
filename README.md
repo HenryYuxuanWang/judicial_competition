@@ -18,9 +18,9 @@ scikit-learn==0.19.1<br>
 ## **比赛详情**
 ![比赛介绍](/pics/competition.png)<br>
 为了促进法律智能相关技术的发展，在最高人民法院信息中心、共青团中央青年发展部的指导下，中国司法大数据研究院、中国中文信息学会、中电科系统团委联合清华大学、北京大学、中国科学院软件研究所共同举办“2018中国‘法研杯’法律智能挑战赛（CAIL2018）”。<br>
-官方网站：[http://cail.cipsc.org.cn](http://cail.cipsc.org.cn "悬停显示")<br>
-域名：[http://180.76.238.177](http://180.76.238.177 "悬停显示")<br>
-GitHub：[https://github.com/thunlp/CAIL ](https://github.com/thunlp/CAIL "悬停显示")
+官方网站:  [http://cail.cipsc.org.cn](http://cail.cipsc.org.cn "悬停显示")<br>
+域名:     [http://180.76.238.177](http://180.76.238.177 "悬停显示")<br>
+GitHub:  [https://github.com/thunlp/CAIL ](https://github.com/thunlp/CAIL "悬停显示")
 
 ## **任务介绍**
 --------------------
@@ -70,12 +70,20 @@ __*字段及意义:*__
 数据预处理的功能主要包含在`data_utils`中，包括数据预处理各类功能函数集合[data_processing.py](/data_utils/data_processing.py)和对数据进行实际预处理的数据准备模块[data_preparation.py](/data_utils/data_preparation.py)。<br>
 数据预处理要点：
 1. 对文本进行分词进行分词，只保留长度大于1的词语（即去除单个字的）；
-2.
+2. 部分案情陈述中都有的涉案金额，但金额数量比较零散，不同意，容易导致在分词后建立词典时被筛掉，所以需要对涉案金额进行化整处理。
+即预先订好固定的金额区间，如“50, 100, 200, 500, 800, 1000, 2000, 5000”，然后把处于对应区间的金额转化为固定的金额数值。
+3. 去掉部分停用词，查阅了部分案情陈述后发现，大部分的案情陈述都涉及相同或类似的词语，如“某某，某某乡，某某县，被告人，上午，下午”等。
+这类词语词频相当高，需要把他们去掉，以免影响对数据进行干扰。
 
 
 ## **模型**
 --------------------
-  在这个项目中我主要使用了CNN和TextCNN去做，对比起RNN，CNN在时间成本上更有优势
+在这个项目的时候，对RNN和LSTM还不是很了解，所以主要使用了CNN和TextCNN去做，而且对比起对比起RNN，CNN在时间成本上更有优势。<br>
+__*CNN模型结构*：__<br>
+![](/pics/cnn_filter3.png)
+
+__*TextCNN模型结构*：__<br>
+![](/pics/textcnn_filter345.png)
 
 
 
