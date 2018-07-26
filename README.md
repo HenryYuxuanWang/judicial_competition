@@ -4,6 +4,7 @@
 ## **语言**
 -----------
 Python 3.5<br>
+[![](https://img.shields.io/badge/Python-3.5-blue.svg)](https://www.python.org/)<br>
 
 
 ## **依赖库**
